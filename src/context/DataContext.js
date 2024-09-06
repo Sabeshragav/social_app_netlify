@@ -18,11 +18,13 @@ export const DataProvider = ({ children }) => {
   const [getEditBody, setEditBody] = useState("");
   const navigate = useNavigate();
   const getBatteryState = useBattery();
+  const [getError, setError] = useState(null);
 
   useEffect(() => {
     const fetchPosts = async () => {
       try {
         const response = await api.get("/posts");
+        setError(null);
         setPosts(response.data);
         setIsLoading(false);
       } catch (error) {
@@ -32,6 +34,7 @@ export const DataProvider = ({ children }) => {
           console.log(error.response.status);
           console.log(error.response.headers);
         } else {
+          setError(error.message);
           console.log(`Error : ${error.message}`);
         }
       }
@@ -132,6 +135,7 @@ export const DataProvider = ({ children }) => {
         getEditTitle,
         getEditBody,
         getBatteryState,
+        getError,
         setSearch,
         setTitle,
         setBody,
