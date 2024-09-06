@@ -11,7 +11,7 @@ const SearchBar = ({ setSearch }) => {
           name=""
           id=""
           onChange={(e) => setSearch(e.target.value)}
-          placeholder="Search Posts"
+          placeholder="Search For Posts"
         />
       </form>
     </main>
