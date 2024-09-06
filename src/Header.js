@@ -17,7 +17,9 @@ const Header = ({ title }) => {
           <IoMdBatteryCharging className="h-5 w-5" />
         )}
         {!getBatteryState.charging && <IoMdBatteryFull className="h-5 w-5" />}
-        <span className="text-xl">{getBatteryState.level * 100}%</span>
+        <span className="text-xl">
+          {(getBatteryState.level * 100).toFixed()}%
+        </span>
       </div>
     </header>
   );
