@@ -1,0 +1,52 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "Introduction to React",
+      "datetime": "September 05, 2024 2:30 PM",
+      "body": "React is a JavaScript library for building user interfaces."
+    },
+    {
+      "id": "2",
+      "title": "Learning JavaScript",
+      "datetime": "September 06, 2024 10:15 AM",
+      "body": "JavaScript is a versatile language used for web development."
+    },
+    {
+      "id": "3",
+      "title": "CSS Basics",
+      "datetime": "September 06, 2024 12:45 PM",
+      "body": "CSS is used for styling web pages."
+    },
+    {
+      "id": "4",
+      "title": "hello",
+      "datetime": "September 06, 2024 4:58 PM",
+      "body": "bye"
+    },
+    {
+      "id": "5",
+      "title": "Understanding APIs",
+      "datetime": "September 07, 2024 9:20 AM",
+      "body": "APIs allow different applications to communicate with each other."
+    },
+    {
+      "id": "6",
+      "title": "my first post",
+      "datetime": "September 06 ,2024 5:14 PM",
+      "body": "a body text"
+    },
+    {
+      "id": "7",
+      "title": "hi",
+      "datetime": "September 06 ,2024 5:33 PM",
+      "body": "savscirbe us"
+    },
+    {
+      "id": "8",
+      "title": "dsdas",
+      "datetime": "September 06 ,2024 5:57 PM",
+      "body": "dsadas"
+    }
+  ]
+}
