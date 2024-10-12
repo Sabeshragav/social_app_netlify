@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Posts = ({ post }) => {
   return (
     <article className="border-b pb-9 p-5 space-y-2">
-      <Link to={`/post/${post.id}`}>
+      <Link to={`/post/${post._id}`}>
         <h2 className="text-3xl font-bold">{post.title}</h2>
         <p className="text-base font-thin">{post.datetime}</p>
       </Link>

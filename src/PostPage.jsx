@@ -7,7 +7,7 @@ const PostPage = () => {
   const { getPosts, handleDelete, setEditTitle, setEditBody } =
     useContext(DataContext);
   const id = useParams().id;
-  const post = getPosts.find((post) => post.id === id);
+  const post = getPosts.find((post) => post._id === id);
 
   useEffect(() => {
     if (post) {

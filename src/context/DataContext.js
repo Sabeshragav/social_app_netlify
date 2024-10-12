@@ -29,7 +29,6 @@ export const DataProvider = ({ children }) => {
         setIsLoading(false);
       } catch (error) {
         if (error.response) {
-          // Not in the 200 response range
           console.log(error.response.data);
           console.log(error.response.status);
           console.log(error.response.headers);
@@ -39,9 +38,7 @@ export const DataProvider = ({ children }) => {
         }
       }
     };
-    setTimeout(() => {
-      fetchPosts();
-    }, 3000);
+    fetchPosts();
   }, []);
 
   useEffect(() => {
@@ -58,14 +55,9 @@ export const DataProvider = ({ children }) => {
       e.preventDefault();
       setIsPost(true);
       if (getTitle.trim().length && getBody.trim().length) {
-        const newId =
-          getPosts.length > 0
-            ? (Number(getPosts[getPosts.length - 1].id) + 1).toString()
-            : "1";
         const newDatetime = format(new Date(), "MMMM dd ,yyyy p");
 
         const newPost = {
-          id: newId,
           title: getTitle,
           datetime: newDatetime,
           body: getBody,
@@ -95,7 +87,6 @@ export const DataProvider = ({ children }) => {
     e.preventDefault();
     const newDatetime = format(new Date(), "MMMM dd ,yyyy p");
     const updatePost = {
-      id,
       title: getEditTitle,
       datetime: newDatetime,
       body: getEditBody,
@@ -103,7 +94,7 @@ export const DataProvider = ({ children }) => {
     try {
       const response = await api.put(`/posts/${id}`, updatePost);
       setPosts(
-        getPosts.map((post) => (post.id === id ? { ...response.data } : post))
+        getPosts.map((post) => (post._id === id ? { ...response.data } : post))
       );
       setEditBody("");
       setEditTitle("");
@@ -116,8 +107,9 @@ export const DataProvider = ({ children }) => {
   const handleDelete = async (e, id) => {
     try {
       e.preventDefault();
-      const updatedPosts = getPosts.filter((post) => post.id !== id);
+      const updatedPosts = getPosts.filter((post) => post._id !== id);
       setPosts(updatedPosts);
+
       await api.delete(`/posts/${id}`);
       navigate("/");
     } catch (error) {

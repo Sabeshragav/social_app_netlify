@@ -7,7 +7,7 @@ const Feed = () => {
   return (
     <div className="text-white overflow-auto h-[31rem] space-y-10">
       {getSearchResults.map((post) => (
-        <Posts key={post.id} post={post} />
+        <Posts key={post._id} post={post} />
       ))}
     </div>
   );
