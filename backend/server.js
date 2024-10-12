@@ -4,7 +4,7 @@ const postSchema = require("./postSchema");
 const cors = require("cors");
 
 const app = express();
-const PORT = process.env.PORT || 3500;
+const PORT = process.env.X_ZOHO_CATALYST_LISTEN_PORT || 8000;
 
 main().catch((err) => console.error(err));
 app.use(cors());
@@ -12,7 +12,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 async function main() {
-  await mongoose.connect("mongodb://127.0.0.1:27017/social_media");
+  await mongoose.connect(
+    "mongodb+srv://sabeshragav289:4YTPYt3jlKI5WXon@cluster0.g77wa.mongodb.net/social_media?retryWrites=true&w=majority"
+  );
 
   //fetching all posts
   app.get("/posts", async (req, res, next) => {

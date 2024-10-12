@@ -1,0 +1,48 @@
+{
+  "defaults": {
+    "project": 2,
+    "env": 1
+  },
+  "actives": {
+    "project": 2,
+    "env": 1
+  },
+  "projects": [
+    {
+      "idx": 1,
+      "id": "9688000000010785",
+      "name": "social-app",
+      "domain": {
+        "id": "50022708441",
+        "name": "social-app-60033313611.development"
+      },
+      "timezone": "Asia/Kolkata",
+      "env": [
+        {
+          "idx": 1,
+          "id": "60033313611",
+          "name": "Development",
+          "type": 3
+        }
+      ]
+    },
+    {
+      "idx": 2,
+      "id": "9688000000010829",
+      "name": "socialapp-backend",
+      "domain": {
+        "id": "50022708447",
+        "name": "socialapp-backend-60033313611.development"
+      },
+      "timezone": "Asia/Kolkata",
+      "env": [
+        {
+          "idx": 1,
+          "id": "60033313611",
+          "name": "Development",
+          "type": 3
+        }
+      ]
+    }
+  ]
+}
