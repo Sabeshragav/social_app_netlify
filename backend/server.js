@@ -13,7 +13,7 @@ app.use(express.json());
 
 async function main() {
   await mongoose.connect(
-    "mongodb+srv://sabeshragav289:4YTPYt3jlKI5WXon@cluster0.g77wa.mongodb.net/social_media?retryWrites=true&w=majority"
+    ""
   );
 
   //fetching all posts
