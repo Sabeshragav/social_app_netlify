@@ -39,9 +39,9 @@ export const DataProvider = ({ children }) => {
         }
       }
     };
-    setTimeout(() => {
+    
       fetchPosts();
-    }, 3000);
+    
   }, []);
 
   useEffect(() => {
